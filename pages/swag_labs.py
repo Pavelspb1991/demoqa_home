@@ -10,3 +10,18 @@ class SwagLabs(BasePage):
         except NoSuchElementException:
             return False
         return True
+
+    def name_assert(self):
+
+        try:
+            self.find_element(locator='#user-name')#password
+        except NoSuchElementException:
+            return False
+        return True
+
+    def password_assert(self):
+        try:
+            self.find_element(locator='#password')
+        except NoSuchElementException:
+            return False
+        return True
